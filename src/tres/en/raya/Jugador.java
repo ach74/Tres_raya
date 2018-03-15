@@ -1,26 +1,43 @@
-package tres.en.raya ;
+package tres.en.raya;
 
 import java.util.Scanner;
 
-
 public class Jugador {
-    
-    private  String Nombre; 
-    private Scanner teclado;
- 
-    public Jugador(String Nombre){
+
+    private String Nombre;
+
+    public Jugador(String Nombre) {
         this.Nombre = Nombre;
-        
+
     }
-    
-    public String moviment() {
-        int m_fila,m_col;
-        System.out.println("En que fila?");
-        m_fila = teclado.nextInt();
-        
+
+    public Casella moviment() {
+        Casella c;
+        Scanner t = null;
+
+        c = new Casella(this.movimentCol(t),
+                this.movimentFil(t)
+        );
+
+        return c;
+    }
+
+    private int movimentCol(Scanner t) {
+        int m_col;
+
         System.out.println("En que col?");
-        m_col = teclado.nextInt();
-        
-        return m_col+ " " + m_fila;
+        m_col = t.nextInt();
+
+        return m_col;
     }
+
+    private int movimentFil(Scanner t) {
+        int m_fila;
+
+        System.out.println("En que fila?");
+        m_fila = t.nextInt();
+
+        return m_fila;
+    }
+
 }

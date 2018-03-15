@@ -60,6 +60,7 @@ public class Session {
     public void CrearHumano() {
         // TODO implement me 
         
+        
         System.out.println("Introduce tu nombre : \n");
         
         String NombreJugador = teclado.next();

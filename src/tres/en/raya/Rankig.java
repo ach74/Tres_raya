@@ -13,15 +13,15 @@ public class Rankig {
         
     }
     
-    public void Mostrar() {
+    public void mostrar() {
         // TODO implement me    
     }
     
-    public void Guanyar() {
+    public void guanyar() {
         // TODO implement me    
     }
     
-    public void Empatar() {
+    public void empatar() {
         // TODO implement me    
     }
 }

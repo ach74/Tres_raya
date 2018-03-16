@@ -7,10 +7,13 @@ public class Partida {
  
     public Partida(){
         JugadorActual = 0;
+        
+       
     }
     
-    public void Jugar() {
+    public void jugar() {
         
+
         // TODO implement me    
     }
 }

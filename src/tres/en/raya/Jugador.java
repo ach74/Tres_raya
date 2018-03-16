@@ -9,15 +9,17 @@ public class Jugador {
     public Jugador(String Nombre) {
         this.Nombre = Nombre;
 
+        moviment();
     }
 
     public Casella moviment() {
         Casella c;
-        Scanner t = null;
 
-        c = new Casella(this.movimentCol(t),
-                this.movimentFil(t)
-        );
+        Scanner t = new Scanner(System.in);
+
+        System.out.println("Donde quieres mover?");
+
+        c = new Casella(this.movimentFil(t),this.movimentCol(t));
 
         return c;
     }
@@ -25,7 +27,7 @@ public class Jugador {
     private int movimentCol(Scanner t) {
         int m_col;
 
-        System.out.println("En que col?");
+        System.out.print("En que col:");
         m_col = t.nextInt();
 
         return m_col;
@@ -34,7 +36,7 @@ public class Jugador {
     private int movimentFil(Scanner t) {
         int m_fila;
 
-        System.out.println("En que fila?");
+        System.out.print("En que fila:");
         m_fila = t.nextInt();
 
         return m_fila;

@@ -15,15 +15,9 @@ public class Taulell {
     public Taulell() {
         a = new String[3][3];
 
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length; j++) {
-                a[i][j] = "[  ]";
-                System.out.print("\t" + a[i][j]);
-            }
-            System.out.println("");
-        }
+        Casella m = new Casella(fila, col);
 
-        //Mostrar();
+        mostrar(m);
 
     }
 
@@ -33,31 +27,41 @@ public class Taulell {
     }
 
     public void moure(Casella m) {    //REPRESENTACION GRAFICADEL MOVIMINETO
-        // TODO implement me 
-
+        
+        
     }
 
-    public boolean CompovarGuanyador() {
-        // TODO implement me 
+    public boolean compovarGuanyador() {
         return false;
     }
 
-    public void Mostrar(Casella m) {//Mostrar
-
+    public void mostrar(Casella m) {//Mostrar
+        
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                a[i][j] = "[  ]";
+                System.out.print("\t" + a[i][j]);
+            }
+            System.out.println("");
+        }
+        
         moure(m);
+        
+                
+
     }
 
-    public boolean ComprovarPle() {
+    public boolean comprovarPle() {
         // TODO implement me 
         return false;
     }
 
-    public boolean GetCasella() {
+    public boolean getCasella() {
         // TODO implement me 
         return false;
     }
 
-    public boolean ValidarCasillaBuides() {
+    public boolean validarCasillaBuides() {
 
         return true;
     }

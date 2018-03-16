@@ -37,10 +37,10 @@ public class Session {
        
         Session S = new Session();
         
-        S.Menu();
+        S.menu();
     }
   
-    public void MostrarRanking() {
+    public void mostrarRanking() {
         // TODO implement me    
         Rankig R = new Rankig();
         
@@ -50,14 +50,14 @@ public class Session {
         
     }
     
-    public int SorteigTorn() {
+    public int sorteigTorn() {
         // TODO implement me    
         int Sorteo = (int) (Math.random()*2);
         
         return Sorteo;
     }
     
-    public void CrearHumano() {
+    public void crearHumano() {
         // TODO implement me 
         
         
@@ -72,8 +72,7 @@ public class Session {
         
     }
     
-    public void Menu() {
-        // TODO implement me  
+    public void menu() {
         
         int a;
         
@@ -82,27 +81,25 @@ public class Session {
         a = teclado.nextInt();
         
         if (a == 1){
-            CrearHumano();
-            CrearPartida();
+            crearHumano();
+            crearPartida();
         }else if( a == 2 ){
-            MostrarRanking();
+            mostrarRanking();
         }else{
             System.out.println("No ha seleccionado una opcion posible. \nVuelve a selecionar una opción.");
-            Menu();
+            menu();
         }
         
     }
     
-    public void CrearPartida() {
-        // TODO implement me   
+    public void crearPartida() {
+        
         System.out.println("Partida creada: \n");
         
         Partida P = new Partida();
         
         Taulell T = new Taulell();
-        
-        
-        
+                
     }
 }
 
